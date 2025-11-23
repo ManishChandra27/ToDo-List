@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e3f2fd;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.container{
+    position: relative;
+    background-color: #fff;
+    max-width: 380px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    margin: 85px auto 0;
+}
+
+/* ---------------- INPUT FIELD ---------------- */
+.input-field{
+    width: 100%;
+    position: relative;
+}
+
+.input-field input{
+    width: 100%;
+    height: 64px;
+    border: 1.5px solid #707070;
+    padding: 18px 45px 18px 15px;
+    border-radius: 6px;
+    font-weight: 400;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-field input:focus{
+    border-color: #4070f4;
+}
+
+.input-field input:focus ~ .uil-notes{
+    color: #4070f4;
+}
+
+input:focus::placeholder {
+    color: #9999993b;
+    /* font-size: 20px; */
+    opacity: 1;
+    
+}
+
+
+
+.input-field .uil-notes{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #707070;
+    pointer-events: none;
+}
+
+/* ---------------- TODO LIST ---------------- */
+.todoList{
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+/* Each list item */
+.todoList li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #f2f2f2;
+    padding: 15px 12px;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Checkbox */
+.todoList li input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #4070f4;
+}
+.todoList li input:checked ~ .task{
+    text-decoration:line-through
+}
+
+
+
+/* Todo text */
+.todoList li span{
+    flex: 1;
+    margin-left: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    /* word-break: break-word; */
+}
+
+/* Trash icon */
+.todoList li .uil-trash{
+    font-size: 22px;
+    color: #ff4b4b00;
+    cursor: pointer;
+    transition: 0.2s;
+   
+}
+
+.todoList li:hover .uil-trash{
+   
+    /* transform: scale(1.1); */
+    color: #ff4b4b;
+
+}
+
+.pending-tasks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+.pending-tasks span{
+    color:#333;
+    
+}
+.pending-tasks .clear-button{
+    background-color: #4070f4;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.pending-tasks .clear-button:hover{
+    
+    background-color: #2058f0;
+}
+
+
+.todoList .checkBox{
+    
+    pointer-events: none;
+
+
+}
